@@ -1,0 +1,79 @@
+{
+  "appName": "SafarSaathi",
+  "tagline": "Tell us where you are and where you want to go — we'll tell you exactly which transport to take, where to find it, and what it'll cost.",
+  "nav": {
+    "planner": "Plan a Journey",
+    "assistant": "Ask SafarSaathi AI",
+    "emergency": "Emergency Help",
+    "profile": "Profile",
+    "login": "Log In",
+    "signup": "Sign Up",
+    "logout": "Log Out"
+  },
+  "home": {
+    "heroTitle": "New to this place? We've got the whole route covered.",
+    "heroSubtitle": "Not just directions — the actual auto, e-rickshaw, bus or metro you need, and where to catch it.",
+    "fromLabel": "Starting from",
+    "toLabel": "Going to",
+    "fromPlaceholder": "e.g. New Delhi Railway Station",
+    "toPlaceholder": "e.g. Rajiv Chowk",
+    "priorityLabel": "What matters most to you?",
+    "priorityCheapest": "Cheapest",
+    "priorityFastest": "Fastest",
+    "priorityBalanced": "Balanced",
+    "planButton": "Plan My Journey",
+    "planning": "Planning your route...",
+    "supportedCity": "Currently covering Delhi NCR",
+    "supportedHubsTitle": "Places we currently know well",
+    "resultTitle": "Your journey plan",
+    "totalFare": "Total estimated fare",
+    "totalTime": "Estimated total time",
+    "emergencyNearDest": "Good to know near your destination",
+    "tryVoice": "Tap the mic and just say your destination"
+  },
+  "auth": {
+    "nameLabel": "Full name",
+    "emailLabel": "Email address",
+    "passwordLabel": "Password",
+    "phoneLabel": "Phone number (optional)",
+    "loginTitle": "Welcome back",
+    "loginSubtitle": "Log in to save your journeys and preferences.",
+    "signupTitle": "Create your account",
+    "signupSubtitle": "Takes less than a minute.",
+    "loginButton": "Log In",
+    "signupButton": "Create Account",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "passwordHint": "At least 8 characters, with a letter and a number."
+  },
+  "ai": {
+    "title": "Ask SafarSaathi AI",
+    "subtitle": "Type or speak your question in Hindi or English — e.g. \"I have ₹200 and need to reach India Gate by 7pm from Noida\"",
+    "placeholder": "Ask about your journey...",
+    "send": "Send",
+    "thinking": "Thinking...",
+    "greeting": "Namaste! Tell me where you're starting from and where you want to go, and I'll plan the full journey for you."
+  },
+  "emergency": {
+    "title": "Emergency Help",
+    "subtitle": "Nearby help for your destination, plus national helplines.",
+    "searchPlaceholder": "Enter a place to check nearby help",
+    "search": "Search",
+    "nationalHelplines": "National helplines (India)",
+    "police": "Police",
+    "ambulance": "Ambulance",
+    "womenHelpline": "Women's Helpline",
+    "disaster": "Disaster Management"
+  },
+  "profile": {
+    "title": "Your Profile",
+    "recentJourneys": "Recent journeys",
+    "noJourneys": "No journeys planned yet. Go plan one!",
+    "language": "App language"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "listening": "Listening..."
+  }
+}

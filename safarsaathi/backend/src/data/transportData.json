@@ -1,0 +1,123 @@
+{
+  "city": "Delhi NCR",
+  "note": "MVP dataset. Metro/bus info is modeled on publicly available transit data (DMRC routes, National Open Transit Data style records). E-rickshaw/auto pickup points are static, low-maintenance 'known pickup spot' entries meant to be crowdsourced and verified by users over time — not live tracking.",
+  "hubs": [
+    {
+      "id": "new_delhi_railway",
+      "name": "New Delhi Railway Station",
+      "aliases": ["NDLS", "New Delhi Station"],
+      "type": "railway_station",
+      "metro": {
+        "nearestStation": "New Delhi Metro Station",
+        "lines": ["Yellow Line", "Airport Express Line"],
+        "walkingDistanceMeters": 300
+      },
+      "bus": [
+        { "routeNo": "419", "towards": "Kashmere Gate ISBT" },
+        { "routeNo": "101", "towards": "Connaught Place" }
+      ],
+      "localTransport": [
+        { "type": "e-rickshaw", "pickupPoint": "Ajmeri Gate side, Gate 2", "approxFareRangeINR": [20, 50], "notes": "Available almost 24x7" },
+        { "type": "auto", "pickupPoint": "Paharganj side prepaid auto booth", "approxFareRangeINR": [50, 150], "notes": "Prepaid booth avoids overcharging" }
+      ],
+      "emergency": { "police": "Connaught Place Police Station", "hospital": "Lady Hardinge Medical College Hospital" }
+    },
+    {
+      "id": "rajiv_chowk",
+      "name": "Rajiv Chowk / Connaught Place",
+      "aliases": ["CP", "Connaught Place"],
+      "type": "metro_interchange",
+      "metro": {
+        "nearestStation": "Rajiv Chowk Metro Station",
+        "lines": ["Yellow Line", "Blue Line"],
+        "walkingDistanceMeters": 0
+      },
+      "bus": [{ "routeNo": "101", "towards": "New Delhi Railway Station" }],
+      "localTransport": [
+        { "type": "e-rickshaw", "pickupPoint": "Gate 5, Outer Circle", "approxFareRangeINR": [20, 40], "notes": "Common for Janpath/Palika Bazaar" },
+        { "type": "auto", "pickupPoint": "Gate 2, Baba Kharak Singh Marg side", "approxFareRangeINR": [40, 120] }
+      ],
+      "emergency": { "police": "Parliament Street Police Station", "hospital": "Ram Manohar Lohia Hospital" }
+    },
+    {
+      "id": "kashmere_gate",
+      "name": "Kashmere Gate ISBT",
+      "aliases": ["ISBT", "Kashmiri Gate"],
+      "type": "bus_terminal",
+      "metro": {
+        "nearestStation": "Kashmere Gate Metro Station",
+        "lines": ["Red Line", "Yellow Line", "Violet Line"],
+        "walkingDistanceMeters": 200
+      },
+      "bus": [
+        { "routeNo": "419", "towards": "New Delhi Railway Station" },
+        { "routeNo": "212", "towards": "Red Fort" }
+      ],
+      "localTransport": [
+        { "type": "e-rickshaw", "pickupPoint": "Main ISBT exit gate", "approxFareRangeINR": [20, 50], "notes": "Very high frequency, always available" },
+        { "type": "auto", "pickupPoint": "ISBT taxi stand", "approxFareRangeINR": [50, 150] }
+      ],
+      "emergency": { "police": "Kashmere Gate Police Station", "hospital": "Hindu Rao Hospital" }
+    },
+    {
+      "id": "noida_sector_18",
+      "name": "Noida Sector 18",
+      "aliases": ["Sector 18", "Atta Market"],
+      "type": "commercial_hub",
+      "metro": {
+        "nearestStation": "Botanical Garden Metro Station",
+        "lines": ["Blue Line", "Aqua Line"],
+        "walkingDistanceMeters": 900
+      },
+      "bus": [{ "routeNo": "NOI-12", "towards": "Kashmere Gate ISBT" }],
+      "localTransport": [
+        { "type": "e-rickshaw", "pickupPoint": "Atta Market main gate", "approxFareRangeINR": [15, 40], "notes": "Cheapest way to cover last 900m from metro" },
+        { "type": "auto", "pickupPoint": "Sector 18 auto stand near DLF Mall", "approxFareRangeINR": [40, 100] }
+      ],
+      "emergency": { "police": "Sector 20 Police Station", "hospital": "Kailash Hospital" }
+    },
+    {
+      "id": "cyber_city_gurugram",
+      "name": "Cyber City, Gurugram",
+      "aliases": ["Cyberhub", "DLF Cyber City"],
+      "type": "commercial_hub",
+      "metro": {
+        "nearestStation": "IFFCO Chowk / Cyber City Rapid Metro",
+        "lines": ["Yellow Line", "Rapid Metro (feeder)"],
+        "walkingDistanceMeters": 500
+      },
+      "bus": [{ "routeNo": "GGN-7", "towards": "IFFCO Chowk" }],
+      "localTransport": [
+        { "type": "e-rickshaw", "pickupPoint": "Rapid Metro station exit", "approxFareRangeINR": [20, 40] },
+        { "type": "auto", "pickupPoint": "Cyberhub main gate", "approxFareRangeINR": [40, 120] }
+      ],
+      "emergency": { "police": "DLF Phase 2 Police Station", "hospital": "Artemis Hospital" }
+    },
+    {
+      "id": "igi_airport_t3",
+      "name": "IGI Airport Terminal 3",
+      "aliases": ["Delhi Airport", "T3"],
+      "type": "airport",
+      "metro": {
+        "nearestStation": "New Delhi Airport Metro Station (Airport Express)",
+        "lines": ["Airport Express Line"],
+        "walkingDistanceMeters": 400
+      },
+      "bus": [{ "routeNo": "AC-05", "towards": "New Delhi Railway Station" }],
+      "localTransport": [
+        { "type": "auto", "pickupPoint": "Arrival Gate 5 prepaid booth", "approxFareRangeINR": [100, 250], "notes": "Only prepaid booths recommended at airports" }
+      ],
+      "emergency": { "police": "IGI Airport Police Station", "hospital": "Max Hospital, Saket (nearest major)" }
+    }
+  ],
+  "routesBetweenHubs": [
+    { "from": "new_delhi_railway", "to": "rajiv_chowk", "mode": "metro", "line": "Yellow Line", "approxTimeMin": 8, "approxFareINR": 10 },
+    { "from": "new_delhi_railway", "to": "kashmere_gate", "mode": "metro", "line": "Yellow Line", "approxTimeMin": 12, "approxFareINR": 10 },
+    { "from": "rajiv_chowk", "to": "kashmere_gate", "mode": "metro", "line": "Yellow Line", "approxTimeMin": 10, "approxFareINR": 10 },
+    { "from": "new_delhi_railway", "to": "noida_sector_18", "mode": "metro", "line": "Yellow Line + Blue Line (change at Rajiv Chowk)", "approxTimeMin": 45, "approxFareINR": 40 },
+    { "from": "new_delhi_railway", "to": "cyber_city_gurugram", "mode": "metro", "line": "Yellow Line (change at IFFCO Chowk)", "approxTimeMin": 55, "approxFareINR": 50 },
+    { "from": "new_delhi_railway", "to": "igi_airport_t3", "mode": "metro", "line": "Airport Express Line", "approxTimeMin": 20, "approxFareINR": 60 },
+    { "from": "rajiv_chowk", "to": "igi_airport_t3", "mode": "metro", "line": "Yellow + Airport Express (change at New Delhi)", "approxTimeMin": 30, "approxFareINR": 70 },
+    { "from": "kashmere_gate", "to": "noida_sector_18", "mode": "metro", "line": "Red/Blue (change at Rajiv Chowk)", "approxTimeMin": 50, "approxFareINR": 45 }
+  ]
+}
